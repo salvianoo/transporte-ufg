@@ -1,0 +1,39 @@
+<h1>
+  <span class="glyphicon glyphicon-file"></span>
+  Requisição de veículo
+</h1>
+
+<%= form_for @travel_request do |f| %>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <%= f.label :solicitante, "Departamento" %>
+      <%= f.text_field :solicitante, class: "form-control" %>
+      <p class="help-block">Digite o nome do Departamento responsável.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <%= f.label :destino %>
+      <%= f.text_field :destino, class: "form-control" %>
+      <p class="help-block">Digite o nome da cidade de destino.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <%= f.label :passageiro %>
+      <%= f.text_field :passageiro, class: "form-control" %>
+      <p class="help-block"><%= link_to "Adicionar outro passageiro" %></p>
+    </div>
+  </div>
+
+  <p><%= f.submit "Enviar solicitação", class: "btn btn-primary" %></p>
+
+  <hr>
+
+  <p><%= link_to "Faça o login", root_path %></p>
+  <p><%= link_to "Página inicial", root_path %></p>
+
+<% end %>
