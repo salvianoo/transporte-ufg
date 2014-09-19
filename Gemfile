@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   gem 'spring'
   gem 'rails_layout'
+  gem 'quiet_assets'
 end
 
 group :development, :test do
